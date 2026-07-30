@@ -1,0 +1,84 @@
+{
+  "paging": {
+    "is_end": false,
+    "next": "fixture-next"
+  },
+  "fresh_text": "正常分页信息",
+  "data": [
+    {
+      "id": "normal-1",
+      "type": "feed",
+      "card_type": "answer",
+      "title": "正常回答"
+    },
+    {
+      "id": "ad-type",
+      "type": "feed_advert",
+      "title": "商业推广"
+    },
+    {
+      "id": "ad-json",
+      "type": "feed",
+      "adjson": {
+        "creative_id": "fixture-ad"
+      }
+    },
+    {
+      "id": "ad-promotion",
+      "type": "common_card",
+      "promotion_extra": {
+        "label": "推广"
+      }
+    },
+    {
+      "id": "slot-without-marker",
+      "type": "feed",
+      "card_type": "slot_event_card",
+      "title": "没有广告正向标记，必须保留"
+    },
+    {
+      "id": "market-card",
+      "type": "feed",
+      "card_type": "market_card",
+      "title": "普通市场内容，必须保留"
+    },
+    {
+      "id": "ad-zero",
+      "type": "feed",
+      "ad": 0
+    },
+    {
+      "id": "ad-string-zero",
+      "type": "feed",
+      "ad": "0"
+    },
+    {
+      "id": "ad-false",
+      "type": "feed",
+      "ad": false
+    },
+    {
+      "id": "ad-null",
+      "type": "feed",
+      "ad": null
+    },
+    {
+      "id": "ad-empty-object",
+      "type": "feed",
+      "ad": {}
+    },
+    {
+      "id": "ad-empty-array",
+      "type": "feed",
+      "ad": []
+    },
+    {
+      "id": "promotion-ordinary",
+      "type": "feed",
+      "card_type": "answer",
+      "promotion_extra": {
+        "label": "非 common_card，不自动删除"
+      }
+    }
+  ]
+}

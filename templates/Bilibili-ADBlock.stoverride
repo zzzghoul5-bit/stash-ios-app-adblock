@@ -1,0 +1,25 @@
+name: "B站 App 去广告（保守版）"
+desc: "仅处理已审计的开屏、首页推荐流和竖屏故事广告；不改会员、账号、地区或清晰度。"
+category: "广告过滤"
+date: "2026-07-30"
+version: "1.1.0"
+
+http:
+  mitm:
+    - app.bilibili.com
+    - app.biliapi.net
+  script:
+    - match: '^https:\/\/app\.(?:bilibili\.com|biliapi\.net)\/x\/v2\/(?:splash\/(?:show|list|brand\/list|event\/list2)|feed\/index(?:\/story)?)(?:\?|$)'
+      name: local-bilibili-adblock
+      type: response
+      require-body: true
+      max-size: 2097152
+      timeout: 10
+
+script-providers:
+  local-bilibili-adblock:
+    url: https://raw.githubusercontent.com/zzzghoul5-bit/stash-ios-app-adblock/main/scripts/bilibili-adblock.js
+    path: ./stash-ios-app-adblock/bilibili-adblock.js
+    interval: 86400
+    payload: |
+__SCRIPT_PAYLOAD__

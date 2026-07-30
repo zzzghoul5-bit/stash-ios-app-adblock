@@ -1,0 +1,66 @@
+{
+  "code": 0,
+  "data": {
+    "cursor": "bili-cursor-001",
+    "items": [
+      {
+        "id": "normal-1",
+        "card_type": "small_cover_v2",
+        "card_goto": "av",
+        "title": "正常视频"
+      },
+      {
+        "id": "ad-basic",
+        "card_type": "cm_v2",
+        "card_goto": "ad_av",
+        "title": "广告"
+      },
+      {
+        "id": "ad-inline",
+        "card_type": "cm_v2",
+        "card_goto": "ad_inline_live"
+      },
+      {
+        "id": "ad-double",
+        "card_type": "cm_double_v9",
+        "card_goto": "ad_inline_av"
+      },
+      {
+        "id": "banner-1",
+        "card_type": "banner_v8",
+        "card_goto": "banner",
+        "banner_item": [
+          {
+            "type": "ad",
+            "title": "广告横幅"
+          },
+          {
+            "type": "resource",
+            "title": "正常活动"
+          }
+        ]
+      },
+      {
+        "id": "banner-all-ad",
+        "card_type": "banner_ipad_v8",
+        "card_goto": "banner",
+        "banner_item": [
+          {
+            "type": "ad",
+            "title": "唯一广告横幅"
+          }
+        ]
+      },
+      {
+        "id": "game-card",
+        "card_type": "small_cover_v10",
+        "card_goto": "game"
+      },
+      {
+        "id": "future-shape",
+        "card_type": "cm_v1",
+        "card_goto": "ad_inline_live"
+      }
+    ]
+  }
+}

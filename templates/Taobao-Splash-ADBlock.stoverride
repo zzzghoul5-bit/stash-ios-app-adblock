@@ -1,0 +1,24 @@
+name: "淘宝 App 开屏去广告（保守版）"
+desc: "实验性：保留开屏数组结构，仅令已有广告时间与素材字段失效；不处理推荐、搜索、购物车、订单、登录或支付。"
+category: "广告过滤"
+date: "2026-07-30"
+version: "1.1.0"
+
+http:
+  mitm:
+    - guide-acs.m.taobao.com
+  script:
+    - match: '^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get(?:\/\d+(?:\.\d+)*\/?)?(?:\?|$)'
+      name: local-taobao-splash-adblock
+      type: response
+      require-body: true
+      max-size: 2097152
+      timeout: 10
+
+script-providers:
+  local-taobao-splash-adblock:
+    url: https://raw.githubusercontent.com/zzzghoul5-bit/stash-ios-app-adblock/main/scripts/taobao-splash.js
+    path: ./stash-ios-app-adblock/taobao-splash.js
+    interval: 86400
+    payload: |
+__SCRIPT_PAYLOAD__

@@ -1,0 +1,24 @@
+{
+  "ret": [
+    "SUCCESS::调用成功"
+  ],
+  "data": {
+    "login": {
+      "state": "signed-in",
+      "user": "fixture-user"
+    },
+    "cart": [
+      {
+        "sku": "fixture-sku",
+        "quantity": 1
+      }
+    ],
+    "order": {
+      "id": "fixture-order",
+      "state": "unpaid"
+    },
+    "payment": {
+      "state": "not-started"
+    }
+  }
+}

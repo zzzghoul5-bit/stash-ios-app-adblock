@@ -1,0 +1,19 @@
+{
+  "name": "stash-ios-app-adblock",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "保守、可审计的 iOS Stash 应用内广告过滤覆写",
+  "scripts": {
+    "build": "node tools/bundle-overrides.mjs",
+    "build:check": "node tools/bundle-overrides.mjs --check",
+    "test": "node --test tests/bilibili.test.mjs tests/zhihu.test.mjs tests/taobao.test.mjs tests/project.test.mjs",
+    "validate": "python tools/validate-overrides.py",
+    "check": "npm run build && npm run test && npm run validate",
+    "check:updates": "node tools/update-upstreams.mjs",
+    "check:updates:offline": "node tools/update-upstreams.mjs --offline"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

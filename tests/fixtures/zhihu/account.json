@@ -1,0 +1,9 @@
+{
+  "data": {
+    "account": {
+      "id": "fixture-user",
+      "name": "脱敏用户"
+    },
+    "login_state": "signed-in"
+  }
+}

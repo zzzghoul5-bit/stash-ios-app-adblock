@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-07-29",
+  "policy": {
+    "automaticReplacement": false,
+    "requireTestsBeforeUpdate": true,
+    "requireCaptureForNewEndpoints": true
+  },
+  "upstreams": [
+    {
+      "id": "biliuniverse-adblock",
+      "apps": [
+        "bilibili"
+      ],
+      "repository": "BiliUniverse/ADBlock",
+      "repositoryUrl": "https://github.com/BiliUniverse/ADBlock",
+      "tracking": {
+        "mode": "release",
+        "release": "v0.6.24"
+      },
+      "pinnedCommit": "2879496ca5e18f2bb0efb7ce1582415f52524a7c",
+      "retrievedAt": "2026-07-29",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/BiliUniverse/ADBlock/blob/2879496ca5e18f2bb0efb7ce1582415f52524a7c/LICENSE",
+      "usage": "behavioral-reference",
+      "redistribution": false,
+      "notes": "只采用广告接口和正向广告标记的行为参考；未复制上游脚本，也未采用请求重签名、缓存重取、地区或会员功能。",
+      "watch": [
+        {
+          "path": "template/stash.handlebars",
+          "bytes": 5144,
+          "gitBlobSha1": "4c0fbf799d71e09197961391934e5538c85425cd",
+          "sha256": "5f8a70d2a61b3c2e68679282a4894a62849f6b12c190b134c5b709ec4eaeda2f"
+        },
+        {
+          "path": "src/response.js",
+          "bytes": 28642,
+          "gitBlobSha1": "c13a66c48a40b6afacb4fc71b8371c1e322f25e6",
+          "sha256": "2c3a40a8099074f3d2a9dc7310bce8a02152dca07a27b60ed441ef31f3fe7b7a"
+        },
+        {
+          "path": "src/request.js",
+          "bytes": 6690,
+          "gitBlobSha1": "a632bb5586f1315959f559e611f1a92753c6de21",
+          "sha256": "95748edbc67d111b4dfdb101b2a3e9a325d7d06ccb8e477798ff7bbcbfa05f5d"
+        }
+      ]
+    },
+    {
+      "id": "fmz200-zhihu",
+      "apps": [
+        "zhihu"
+      ],
+      "repository": "fmz200/wool_scripts",
+      "repositoryUrl": "https://github.com/fmz200/wool_scripts",
+      "tracking": {
+        "mode": "branch",
+        "branch": "main"
+      },
+      "pinnedCommit": "a32915d2aadf9564fd9842114df02c90ca9566a7",
+      "retrievedAt": "2026-07-29",
+      "license": "GPL-3.0",
+      "licenseUrl": "https://github.com/fmz200/wool_scripts/blob/a32915d2aadf9564fd9842114df02c90ca9566a7/LICENSE",
+      "usage": "behavioral-reference",
+      "redistribution": false,
+      "notes": "仅用于核对接口与响应字段；本项目脚本为独立的最小实现。",
+      "watch": [
+        {
+          "path": "Surge/module/split/partZ/Zhihu.sgmodule",
+          "bytes": 7727,
+          "gitBlobSha1": "b0215657d5a0f25746f287a3ebd3040197e99b29",
+          "sha256": "4f064915d1efc056df784f24a2f50baaa94f59be4d698597f561fef818b77964"
+        },
+        {
+          "path": "Scripts/zhihu/zhihu.js",
+          "bytes": 7358,
+          "gitBlobSha1": "3122c1682cc7634fb97ef229fd9ad618fdfce729",
+          "sha256": "544fd88207b9d7005bb5cf427a1994028f91a95a65fde3db72a501983bff99f4"
+        }
+      ]
+    },
+    {
+      "id": "blackmatrix7-zheye",
+      "apps": [
+        "zhihu"
+      ],
+      "repository": "blackmatrix7/ios_rule_script",
+      "repositoryUrl": "https://github.com/blackmatrix7/ios_rule_script",
+      "tracking": {
+        "mode": "branch",
+        "branch": "master"
+      },
+      "pinnedCommit": "8818705adee20571a856daf11c9fc69c4929109a",
+      "retrievedAt": "2026-07-29",
+      "license": "GPL-2.0 with repository-specific distribution restrictions",
+      "licenseUrl": "https://github.com/blackmatrix7/ios_rule_script/blob/8818705adee20571a856daf11c9fc69c4929109a/LICENSE",
+      "usage": "behavioral-reference",
+      "redistribution": false,
+      "notes": "仓库 README 有额外转载限制；不复制、不镜像、不远程引用其未固定 Gist，仅以固定仓库快照核对行为。",
+      "watch": [
+        {
+          "path": "script/zheye/zheye.stoverride",
+          "bytes": 6475,
+          "gitBlobSha1": "cea79d1ff22292c89114164ad6a9d337980698f3",
+          "sha256": "7f11332bd5865820a2cac8be4c9796e072b86b4ab7c3d20a0d2db528df8959cb"
+        },
+        {
+          "path": "source/javascript/576875ff1c6a706bc2ac0cfc005c74f9.js",
+          "bytes": 63023,
+          "gitBlobSha1": "42a685c2bcbdd7db4460b8309cbef117deb7b92a",
+          "sha256": "1617ddf2a86d3adc42739fd7e45815e6efb4b5f85f56f0801317453589f231f3"
+        }
+      ]
+    },
+    {
+      "id": "zirawell-taobao",
+      "apps": [
+        "taobao"
+      ],
+      "repository": "zirawell/R-Store",
+      "repositoryUrl": "https://github.com/zirawell/R-Store",
+      "tracking": {
+        "mode": "branch",
+        "branch": "main"
+      },
+      "pinnedCommit": "18a09f484f60eeea4ee24cfcadf53e3b68b7f4ab",
+      "retrievedAt": "2026-07-29",
+      "license": "GPL-3.0",
+      "licenseUrl": "https://github.com/zirawell/R-Store/blob/18a09f484f60eeea4ee24cfcadf53e3b68b7f4ab/LICENSE",
+      "usage": "behavioral-reference",
+      "redistribution": false,
+      "notes": "只使用开屏接口和嵌套结构作为行为参考；不复制大而全的电商过滤脚本。",
+      "watch": [
+        {
+          "path": "Rule/Surge/Adblock/App/T/淘宝/taobao.sgmodule",
+          "bytes": 4182,
+          "gitBlobSha1": "a7a92cf06a4b73068871371e8d957f6e8d945f46",
+          "sha256": "039763b9af1ddb38a23224ba3473839a6b19419cf56e57f0cb6f7489d1a9e302"
+        },
+        {
+          "path": "Res/Scripts/AntiAd/taobao.js",
+          "bytes": 2528,
+          "gitBlobSha1": "5434d91ab8d7daff28026305f2765bb6f2c42eea",
+          "sha256": "948921def8daf5fc8da5f36645569e1b01ee03c99f2c2d54da6ae77b8cef8a86"
+        }
+      ]
+    },
+    {
+      "id": "fmz200-taobao",
+      "apps": [
+        "taobao"
+      ],
+      "repository": "fmz200/wool_scripts",
+      "repositoryUrl": "https://github.com/fmz200/wool_scripts",
+      "tracking": {
+        "mode": "branch",
+        "branch": "main"
+      },
+      "pinnedCommit": "a32915d2aadf9564fd9842114df02c90ca9566a7",
+      "retrievedAt": "2026-07-29",
+      "license": "GPL-3.0",
+      "licenseUrl": "https://github.com/fmz200/wool_scripts/blob/a32915d2aadf9564fd9842114df02c90ca9566a7/LICENSE",
+      "usage": "behavioral-reference",
+      "redistribution": false,
+      "notes": "第二个公开快照，但与首个来源属于同一实现谱系；仅用于交叉核对淘宝开屏接口，不复制脚本。",
+      "watch": [
+        {
+          "path": "Surge/module/split/partT/Taobao.sgmodule",
+          "bytes": 3812,
+          "gitBlobSha1": "c9d37d1a8e8760b26fb7a92ea6336ed994bccd21",
+          "sha256": "15f461ce0737004a181669637dfa50711960373c70669d9ba1dd74ad7367993c"
+        },
+        {
+          "path": "Scripts/myBlockAds.js",
+          "bytes": 7652,
+          "gitBlobSha1": "3fe01285fb41e76a930e749b37e965894d3443ad",
+          "sha256": "4cf62100424886068a5470daecec319e93ccd034c647d79a9daaa72bbbc341bb"
+        }
+      ]
+    }
+  ]
+}

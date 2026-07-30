@@ -1,0 +1,75 @@
+{
+  "ret": [
+    "SUCCESS::调用成功"
+  ],
+  "data": {
+    "containers": {
+      "splash_home_base": {
+        "base": {
+          "sections": [
+            {
+              "sectionId": "splash-section",
+              "bizData": {
+                "taobao-splash": {
+                  "data": [
+                    {
+                      "id": "splash-ad-1",
+                      "waitTime": "5",
+                      "times": "1",
+                      "hotStart": "true",
+                      "haveVoice": "true",
+                      "hideTBLogo": "true",
+                      "enable4G": "true",
+                      "coldStart": "true",
+                      "startTime": "1760000000000",
+                      "endTime": "1760086399000",
+                      "gmtStart": "2025-10-09 00:00:00",
+                      "gmtEnd": "2025-10-09 23:59:59",
+                      "gmtStartMs": "1760000000000",
+                      "gmtEndMs": "1760086399000",
+                      "imgUrl": "https://fixture.invalid/ad-1.png",
+                      "videoUrl": "https://fixture.invalid/ad-1.mp4",
+                      "tracking": "preserve-me"
+                    },
+                    {
+                      "id": "splash-ad-2",
+                      "startTime": "1760000000000",
+                      "endTime": "1760086399000",
+                      "gmtStart": "2025-10-09 00:00:00",
+                      "gmtEnd": "2025-10-09 23:59:59",
+                      "imgUrl": "https://fixture.invalid/ad-2.png",
+                      "tracking": "also-preserve"
+                    }
+                  ],
+                  "config": {
+                    "duration": 3
+                  }
+                },
+                "normal-widget": {
+                  "data": [
+                    {
+                      "id": "normal-widget-1"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "sectionId": "normal-section",
+              "bizData": {
+                "recommendation": {
+                  "data": [
+                    {
+                      "id": "normal-recommendation"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "cursor": "taobao-cursor"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+name: "知乎 App 去广告（保守版）"
+desc: "精确拒绝独立商业接口，并仅删除推荐流、回答接口中的明确广告字段。"
+category: "广告过滤"
+date: "2026-07-30"
+version: "1.1.0"
+
+http:
+  mitm:
+    - api.zhihu.com
+  url-rewrite:
+    - '^https:\/\/api\.zhihu\.com\/commercial_api\/(?:launch_v2|real_time_launch_v2)\/?(?:\?|$) - reject-dict'
+    - '^https:\/\/api\.zhihu\.com\/commercial_api\/(?:answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner)\/?(?:\?|$) - reject-dict'
+    - '^https:\/\/api\.zhihu\.com\/ad-style-service\/request\/?(?:\?|$) - reject-dict'
+  script:
+    - match: '^https:\/\/api\.zhihu\.com\/(?:commercial_api\/app_float_layer|topstory\/recommend|(?:v4\/)?questions\/\d+\/(?:feeds?|answers))\/?(?:\?|$)'
+      name: local-zhihu-adblock
+      type: response
+      require-body: true
+      max-size: 3145728
+      timeout: 10
+
+script-providers:
+  local-zhihu-adblock:
+    url: https://raw.githubusercontent.com/zzzghoul5-bit/stash-ios-app-adblock/main/scripts/zhihu-adblock.js
+    path: ./stash-ios-app-adblock/zhihu-adblock.js
+    interval: 86400
+    payload: |
+__SCRIPT_PAYLOAD__

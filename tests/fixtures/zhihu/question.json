@@ -1,0 +1,20 @@
+{
+  "paging": {
+    "is_end": true
+  },
+  "ad_info": {
+    "id": "top-ad"
+  },
+  "data": {
+    "ad_info": {
+      "id": "nested-ad"
+    },
+    "answers": [
+      {
+        "id": "answer-1",
+        "content": "正常回答"
+      }
+    ],
+    "cursor": "question-cursor"
+  }
+}
