@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-07-29",
+  "checkedAt": "2026-10-15",
   "policy": {
     "automaticReplacement": false,
     "requireTestsBeforeUpdate": true,
@@ -8,41 +8,59 @@
   },
   "upstreams": [
     {
-      "id": "biliuniverse-adblock",
+      "id": "biliverse-adblock",
       "apps": [
         "bilibili"
       ],
-      "repository": "BiliUniverse/ADBlock",
-      "repositoryUrl": "https://github.com/BiliUniverse/ADBlock",
+      "repository": "Biliverse/ADBlock",
+      "repositoryUrl": "https://github.com/Biliverse/ADBlock",
       "tracking": {
         "mode": "release",
-        "release": "v0.6.24"
+        "release": "v0.7.3"
       },
-      "pinnedCommit": "2879496ca5e18f2bb0efb7ce1582415f52524a7c",
-      "retrievedAt": "2026-07-29",
+      "pinnedCommit": "bf9f66250fe97383847ffabfcb6183fed752e181",
+      "retrievedAt": "2026-10-15",
       "license": "Apache-2.0",
-      "licenseUrl": "https://github.com/BiliUniverse/ADBlock/blob/2879496ca5e18f2bb0efb7ce1582415f52524a7c/LICENSE",
+      "licenseUrl": "https://github.com/Biliverse/ADBlock/blob/bf9f66250fe97383847ffabfcb6183fed752e181/LICENSE",
       "usage": "behavioral-reference",
       "redistribution": false,
-      "notes": "只采用广告接口和正向广告标记的行为参考；未复制上游脚本，也未采用请求重签名、缓存重取、地区或会员功能。",
+      "notes": "只采用广告接口和正向广告标记的行为参考；v0.7.3 新增的 AIRelateAsync 仅登记为 capture-required，未默认启用；未复制上游脚本，也未采用请求重签名、缓存重取、地区或会员功能。",
       "watch": [
         {
           "path": "template/stash.handlebars",
-          "bytes": 5144,
-          "gitBlobSha1": "4c0fbf799d71e09197961391934e5538c85425cd",
-          "sha256": "5f8a70d2a61b3c2e68679282a4894a62849f6b12c190b134c5b709ec4eaeda2f"
+          "bytes": 6735,
+          "gitBlobSha1": "cfbba18811c1ead025ff84122a4345aa0ca550ff",
+          "sha256": "eeb1e9ba3c4c75ad650337ed86001cd0ccb9f39953da547740c5bcd069db52db"
         },
         {
-          "path": "src/response.js",
-          "bytes": 28642,
-          "gitBlobSha1": "c13a66c48a40b6afacb4fc71b8371c1e322f25e6",
-          "sha256": "2c3a40a8099074f3d2a9dc7310bce8a02152dca07a27b60ed441ef31f3fe7b7a"
+          "path": "src/process/Response.mjs",
+          "bytes": 45810,
+          "gitBlobSha1": "c1f283c061198fcd099a0360549b849fd5f1009d",
+          "sha256": "858c8027bc520721999bfe6baeb2119841ba70cda632293f39c06016d85206af"
         },
         {
-          "path": "src/request.js",
-          "bytes": 6690,
-          "gitBlobSha1": "a632bb5586f1315959f559e611f1a92753c6de21",
-          "sha256": "95748edbc67d111b4dfdb101b2a3e9a325d7d06ccb8e477798ff7bbcbfa05f5d"
+          "path": "src/class/ADBlock.mjs",
+          "bytes": 9402,
+          "gitBlobSha1": "76effde9bbdf4c03840ccf566bebd021103d91d2",
+          "sha256": "bb8b87f0735c556aea868ba664959401d9f1007bdd0743473a1cc2fbf96bbb7f"
+        },
+        {
+          "path": "src/function/fixHeaders.mjs",
+          "bytes": 1354,
+          "gitBlobSha1": "6de974e84e9f59e4046af13b3d63a22f12ef6185",
+          "sha256": "b04bceeba959fdb82a09f443c8a62013f0612402d55240538492c0d630bc60e3"
+        },
+        {
+          "path": "package-lock.json",
+          "bytes": 188901,
+          "gitBlobSha1": "7edd7df00862d4bdd0e076976dac1f12758ff96d",
+          "sha256": "6cc2221892341a011c2e36e34bd6ec6ee2bc33cfef2dca93d765389c833a4171"
+        },
+        {
+          "path": "tests/airelateAsync.test.mjs",
+          "bytes": 10205,
+          "gitBlobSha1": "96eb8ed65b95cfc007765c459d9e713073a2eb38",
+          "sha256": "7e78d9f904e4c3cce29fcef5818db012e19e7eeee19d0d3d267005b095e16830"
         }
       ]
     },
@@ -57,10 +75,10 @@
         "mode": "branch",
         "branch": "main"
       },
-      "pinnedCommit": "a32915d2aadf9564fd9842114df02c90ca9566a7",
-      "retrievedAt": "2026-07-29",
+      "pinnedCommit": "5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97",
+      "retrievedAt": "2026-10-15",
       "license": "GPL-3.0",
-      "licenseUrl": "https://github.com/fmz200/wool_scripts/blob/a32915d2aadf9564fd9842114df02c90ca9566a7/LICENSE",
+      "licenseUrl": "https://github.com/fmz200/wool_scripts/blob/5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97/LICENSE",
       "usage": "behavioral-reference",
       "redistribution": false,
       "notes": "仅用于核对接口与响应字段；本项目脚本为独立的最小实现。",
@@ -90,10 +108,10 @@
         "mode": "branch",
         "branch": "master"
       },
-      "pinnedCommit": "8818705adee20571a856daf11c9fc69c4929109a",
-      "retrievedAt": "2026-07-29",
+      "pinnedCommit": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "retrievedAt": "2026-10-15",
       "license": "GPL-2.0 with repository-specific distribution restrictions",
-      "licenseUrl": "https://github.com/blackmatrix7/ios_rule_script/blob/8818705adee20571a856daf11c9fc69c4929109a/LICENSE",
+      "licenseUrl": "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/LICENSE",
       "usage": "behavioral-reference",
       "redistribution": false,
       "notes": "仓库 README 有额外转载限制；不复制、不镜像、不远程引用其未固定 Gist，仅以固定仓库快照核对行为。",
@@ -123,19 +141,19 @@
         "mode": "branch",
         "branch": "main"
       },
-      "pinnedCommit": "18a09f484f60eeea4ee24cfcadf53e3b68b7f4ab",
-      "retrievedAt": "2026-07-29",
+      "pinnedCommit": "3118ed2e25193192e56d94effa6b3ebec9572e17",
+      "retrievedAt": "2026-10-15",
       "license": "GPL-3.0",
-      "licenseUrl": "https://github.com/zirawell/R-Store/blob/18a09f484f60eeea4ee24cfcadf53e3b68b7f4ab/LICENSE",
+      "licenseUrl": "https://github.com/zirawell/R-Store/blob/3118ed2e25193192e56d94effa6b3ebec9572e17/LICENSE",
       "usage": "behavioral-reference",
       "redistribution": false,
-      "notes": "只使用开屏接口和嵌套结构作为行为参考；不复制大而全的电商过滤脚本。",
+      "notes": "只使用开屏接口和嵌套结构作为行为参考；本次监控文件变化仅修正模块图标 URL，过滤逻辑未变；不复制大而全的电商过滤脚本。",
       "watch": [
         {
           "path": "Rule/Surge/Adblock/App/T/淘宝/taobao.sgmodule",
-          "bytes": 4182,
-          "gitBlobSha1": "a7a92cf06a4b73068871371e8d957f6e8d945f46",
-          "sha256": "039763b9af1ddb38a23224ba3473839a6b19419cf56e57f0cb6f7489d1a9e302"
+          "bytes": 4183,
+          "gitBlobSha1": "286eb5f1fd1e44da5558cdf9d78dc028d2f2f908",
+          "sha256": "c2bb658b242a955bb585e2f3f7c57304c76b46e7bf0a8ed0bba9740a8883e3c1"
         },
         {
           "path": "Res/Scripts/AntiAd/taobao.js",
@@ -156,10 +174,10 @@
         "mode": "branch",
         "branch": "main"
       },
-      "pinnedCommit": "a32915d2aadf9564fd9842114df02c90ca9566a7",
-      "retrievedAt": "2026-07-29",
+      "pinnedCommit": "5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97",
+      "retrievedAt": "2026-10-15",
       "license": "GPL-3.0",
-      "licenseUrl": "https://github.com/fmz200/wool_scripts/blob/a32915d2aadf9564fd9842114df02c90ca9566a7/LICENSE",
+      "licenseUrl": "https://github.com/fmz200/wool_scripts/blob/5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97/LICENSE",
       "usage": "behavioral-reference",
       "redistribution": false,
       "notes": "第二个公开快照，但与首个来源属于同一实现谱系；仅用于交叉核对淘宝开屏接口，不复制脚本。",
