@@ -12,10 +12,10 @@
 
 | 端点组 | 处理 | 状态 | 默认启用 | 来源 |
 |---|---|---|---:|---|
-| `/x/v2/splash/{show,list,brand/list,event/list2}` | 删除 `data.event_list/preload/show`，保留 `account` | upstream-only | 是 | BiliUniverse v0.6.24 |
-| `/x/v2/feed/index` | 精确卡片组合和 `banner_item.type=ad` | upstream-only | 是 | BiliUniverse v0.6.24 |
-| `/x/v2/feed/index/story` | `ad_info` 或三个精确 `vertical_ad_*` 值 | upstream-only | 是 | BiliUniverse v0.6.24 |
-| gRPC 推荐接口 | 需要协议级样本和专门处理 | capture-required | 否 | — |
+| `/x/v2/splash/{show,list,brand/list,event/list2}` | 删除 `data.event_list/preload/show`，保留 `account` | upstream-only | 是 | Biliverse v0.7.3 |
+| `/x/v2/feed/index` | 精确卡片组合和 `banner_item.type=ad` | upstream-only | 是 | Biliverse v0.7.3 |
+| `/x/v2/feed/index/story` | `ad_info` 或三个精确 `vertical_ad_*` 值 | upstream-only | 是 | Biliverse v0.7.3 |
+| `/bilibili.app.viewunite.v1.View/AIRelateAsync` | 上游在多个 B 站 gRPC 主机增加异步相关推荐广告过滤；需要当前 App 的脱敏 Protobuf 样本、实际主机和专门处理 | capture-required | 否 | Biliverse v0.7.3 |
 | 课程、游戏、活动、直播带货 | 与本项目目标无关且误伤风险高 | disabled-risky | 否 | — |
 
 计数：`verified=0`，`upstream-only=3`，`capture-required=1`，`disabled-risky=1`。
@@ -52,6 +52,8 @@
 
 ## 最后审计
 
-- 日期：2026-07-29
-- 方式：固定提交审计、双来源交叉核对、脱敏 fixture 回归测试
+- 日期：2026-10-15
+- 方式：固定提交审计、按 App 来源强度评估、脱敏 fixture 回归测试
 - 用户设备验证：尚未进行
+
+本次审计发现 Biliverse v0.7.3 新增 `AIRelateAsync` 处理。上游测试使用合成 wire fixture，并非用户抓包；由于本项目没有用户当前版本的脱敏 Protobuf 样本，未增加 MitM 主机、URL 匹配或默认启用逻辑，其状态保持为 `capture-required`。知乎监控文件无变化；淘宝监控模块只有图标 URL 修正，过滤行为无变化。

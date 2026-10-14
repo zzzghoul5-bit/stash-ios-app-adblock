@@ -4,7 +4,7 @@
 
 | 项目 | 许可证/限制 | 本项目使用方式 | 重新分发上游代码 |
 |---|---|---|---:|
-| BiliUniverse/ADBlock | Apache-2.0 | behavioral-reference | 否 |
+| Biliverse/ADBlock | Apache-2.0 | behavioral-reference | 否 |
 | fmz200/wool_scripts | GPL-3.0 | behavioral-reference | 否 |
 | blackmatrix7/ios_rule_script | GPL-2.0，README 另有转载限制 | behavioral-reference | 否 |
 | zirawell/R-Store | GPL-3.0 | behavioral-reference | 否 |
